@@ -1,0 +1,15 @@
+/* Google web fonts Poppins */
+
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Fredoka+One&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*
+    Custom Properties
+*/
+
+:root {
+    --fuentePrincipal: 'Poppins', sans-serif;
+}
+
+* {
+    font-family: var(--fuentePrincipal);
+}
