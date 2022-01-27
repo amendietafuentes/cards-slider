@@ -8,8 +8,140 @@
 
 :root {
     --fuentePrincipal: 'Poppins', sans-serif;
+    --colorPrimario: #01fc7e;
+    --colorNegro: #000000;
+    --colorBlanco: #FFFFFF;
+    --colorGrisOscuro: #2c2c2cde;
 }
 
 * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: var(--fuentePrincipal);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorGrisOscuro);
+}
+
+section .card .image {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: var(--colorPrimario);
+}
+
+section .card .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card {
+    position: relative;
+    background-color: var(--colorBlanco);
+    border-radius: 2rem;
+    width: 300px;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    background-color: var(--colorPrimario);
+    border-radius: 2rem 2rem 0 0;
+}
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    position: relative;
+    z-index: 100;
+}
+
+.card .media-icons {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .media-icons i {
+    color: var(--colorGrisOscuro);
+    margin: 0.2rem;
+    opacity: 0.85;
+    transition: all 0.5s ease;
+}
+
+.card .media-icons i:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card .card-content .name-profession {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    line-height: 1.2rem;
+}
+
+.card .card-content .name {
+    font-size: var(--fuentePrincipal);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.card .card-content .profession {
+    font-size: var(--fuentePrincipal);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.card .rating i {
+    font-size: 1.2rem;
+    color: var(--colorPrimario);
+    margin: 0 0.2rem;
+}
+
+.card .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.card .buttons button {
+    background-color: var(--colorGrisOscuro);
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    color: var(--colorBlanco);
+    border-radius: 2rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.card .buttons button:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
