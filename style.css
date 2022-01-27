@@ -31,6 +31,18 @@ body {
     background-color: var(--colorGrisOscuro);
 }
 
+section {
+    position: relative;
+    width: 1080px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+}
+
+.swiper {
+    width: 950px;
+}
+
 section .card .image {
     height: 140px;
     width: 140px;
@@ -84,7 +96,7 @@ section .card .image img {
     color: var(--colorGrisOscuro);
     margin: 0.2rem;
     opacity: 0.85;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in;
 }
 
 .card .media-icons i:hover {
@@ -138,10 +150,49 @@ section .card .image img {
     color: var(--colorBlanco);
     border-radius: 2rem;
     outline: none;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .card .buttons button:hover {
     cursor: pointer;
     opacity: 0.8;
+}
+
+.navigation {
+    position: relative;
+    width: 80px;
+    padding: 2rem 0.5rem;
+}
+
+.navigation .swiper-button-next,
+.navigation .swiper-button-prev {
+    background-color: var(--colorPrimario);
+    padding: 0.5rem 0.25rem;
+    border-radius: 0.5rem;
+    height: 2rem;
+    color: var(--colorGrisOscuro);
+    transition: all 0.5s ease;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 1rem;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 1rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 0.8;
+    color: var(--colorBlanco);
+}
+
+.swiper-pagination-bullet {
+    height: 0.7rem;
+    width: 2.6rem;
+    border-radius: 2.5rem;
+    background-color: var(--colorPrimario);
 }
